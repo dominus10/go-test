@@ -1,0 +1,11 @@
+story: |
+  You have come a long way from your war ravaged hometown.
+buttons:
+  q:
+    text: Color it blue
+    tooltip : null
+    conditions:
+      - item_have: blue-dye
+    actions:
+      - next: intro-generic2
+
