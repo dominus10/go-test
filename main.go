@@ -39,7 +39,7 @@ func main() {
 	stack := container.NewStack()
 	screenFactories := widgets.ScreenFactory()
 	manager := injection.NewStackScreenManager(stack, screenFactories)
-	manager.SwitchScreen("login")
+	manager.SwitchScreen("mainmenu")
 
 	w.SetContent(stack)
 	w.ShowAndRun()

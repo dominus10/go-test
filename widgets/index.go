@@ -6,6 +6,7 @@ func ScreenFactory()map[string]injection.ScreenFactory {
 	factory := map[string]injection.ScreenFactory{
 		"login": LoginWidget,
 		"home":  HomeWidget,
+		"mainmenu":  MainMenuWidget,
 	}
 
 	return factory
