@@ -1,14 +1,14 @@
-package main
+package widgets
 
 import (
+	"game/injection"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/layout"
 )
 
-func HomeWidget(manager ScreenMan) fyne.CanvasObject {
-
-	
+func HomeWidget(manager injection.ScreenMan) fyne.CanvasObject {
 	playerBar := container.New(layout.NewVBoxLayout())
 
 	leftContainer := container.New(layout.NewVBoxLayout(),playerBar)

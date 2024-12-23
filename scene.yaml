@@ -1,0 +1,11 @@
+position: village
+coordinate: 1,1
+weather: sunny
+player_party_member:
+  - player
+  - npc 1
+opponent_party_member:
+  - monster 1
+  - monster 2
+item_nearby:
+  - "123" : 1

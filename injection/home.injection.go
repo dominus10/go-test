@@ -1,4 +1,4 @@
-package main
+package injection
 
 import "fmt"
 
@@ -15,7 +15,7 @@ type Character struct {
 	TemporaryStatus map[string]int    `yaml:"temporary_status"`
 	CharacterStatus map[string]int    `yaml:"character_status"`
 	Equipment       []int             `yaml:"equipment"`
-	Inventory       []map[int]int     `yaml:"inventory"`
+	Inventory       []map[string]int  `yaml:"inventory"`
 }
 // Processor defines an interface for processing a character.
 type Processor interface {

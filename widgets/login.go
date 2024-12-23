@@ -1,7 +1,8 @@
-package main
+package widgets
 
 import (
 	"fmt"
+	"game/injection"
 	"image/color"
 
 	"fyne.io/fyne/v2"
@@ -11,7 +12,7 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-func LoginWidget(manager ScreenMan) fyne.CanvasObject {
+func LoginWidget(manager injection.ScreenMan) fyne.CanvasObject {
 	//function
 	var login = func()(bool,error){
 		return true,nil
