@@ -16,8 +16,12 @@ func MainMenuWidget(manager injection.ScreenMan) fyne.CanvasObject {
 
 	// Create buttons
 	continueButton := widget.NewButton("Continue", func() {})
-	newGameButton := widget.NewButton("New Game", func() {})
+	continueButton.Disable()
+	newGameButton := widget.NewButton("New Game", func() {
+		manager.SwitchScreen("home")
+	})
 	loadGameButton := widget.NewButton("Load Game", func() {})
+	loadGameButton.Disable()
 	settingsButton := widget.NewButton("Settings", func() {})
 	quitGameButton := widget.NewButton("Quit Game", func() {})
 

@@ -1,4 +1,4 @@
-package scene
+package injection
 
 import (
 	"context"
