@@ -3,10 +3,12 @@ package main
 import (
 	"game/injection"
 	"game/widgets"
+	"os"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
+	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -32,7 +34,9 @@ func main() {
 	// prevProcessor := scene.NewSceneProcessor(previousScene)
 	// ctx:= context.Background()
 
-	a := app.New()
+	godotenv.Load()
+
+	a := app.NewWithID(os.Getenv("APP_TITLE"))
 	w := a.NewWindow("Sample App")
 	w.Resize(fyne.NewSize(1366, 768))
 
@@ -42,6 +46,7 @@ func main() {
 	manager.SwitchScreen("mainmenu")
 
 	w.SetContent(stack)
+	a.SendNotification(fyne.NewNotification("test","!"))
 	w.ShowAndRun()
 }
 
